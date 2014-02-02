@@ -61,10 +61,10 @@ links:
 		descript: Google+
 
 # 作者
-## face		 头像
-## name		 名字
+## face			头像
+## name			名字
 ## signature	个人签名
-## profile	  个人主页 (名字的连接)
+## profile		个人主页 (名字的连接)
 ## other		其他主页 必须对应下面 ico
 author:
 	David:

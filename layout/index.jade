@@ -8,7 +8,7 @@ html(lang="en")
 
 		.blog-conteinr.container.container-sd
 			.row
-				.col-lg-9.col-md-9.col-sm-12.col-xs-12
+				.col-lg-8.col-md-8.col-sm-12.col-xs-12
 					.main-content
 						include _mixins/article
 						- page.posts.each(function(article) {
@@ -17,14 +17,14 @@ html(lang="en")
 
 					include _partial/pagination
 						
-				.col-lg-3.col-md-3.col-sm-12.col-xs-12
+				.col-lg-4.col-md-4.col-sm-12.col-xs-12
 					.sidebar-content
 						aside
-							include author
-							include category
-							include lively
-							include dynamic
-							include visitors
+							include _sidebar/author
+							include _sidebar/category
+							include _sidebar/lively
+							include _sidebar/dynamic
+							include _sidebar/visitors
 
 		include _partial/footer
 		include _duoshuo/import

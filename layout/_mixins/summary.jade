@@ -1,6 +1,6 @@
 
 
-mixin article(article)
+mixin summary(article)
 	.article
 		article
 			time(datetime!= article.date.toDate().toISOString())= article.date.format(config.date_format)

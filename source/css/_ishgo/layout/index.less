@@ -1,87 +1,63 @@
 
 
-// Index
-// ================
-
 .main-content {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
 .main-content .article {
-	background-color: @blockBg;
-	border-bottom: 1px solid @edge;
-}
-
-.main-content .article article {
 	padding: 24px;
 	display: block;
-	color: @textFont;
-	border-left: 8px solid @edge;
+	color: #817c7c;
 	.transition(border-left .45s);
 
 	a.title > h3 {
 		margin-top: 10px;
-		color: @caption;
-		font-family: Microsoft YaHei,"微软雅黑",STHeiti,Helvetica, Arial, sans-serif;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		word-break: keep-all;
+		white-space: nowrap;
+		color: #666;
+		font-size: 30px;
 		.transition(color .35s);
 	}
 
-	&:hover a.title > h3 {
-		color: @captionAction;
-	}
-
-	p {
-		color: @textFont;
-	}
+	a.title:hover > h3 { color: #2ca6cb; }
 
 	.post-info {
-		font-size: 12px;
-		& > .author,
-		& > .tags,
-		& > .comments,
-		& > time {
-			float: left;
-		}
+		color: #b3b3b3;
+		font-size: 18px;
+		.transition(color .45s);
 
-		& > .author {
-			span { color: @textFont; }
-			&:hover span { color: @linkHoverFont; }
-		}
-
-		& > .tags a:hover {
-			color: @linkHoverFont !important;
-		}
-
-		i {
-			font-size: 16px;
-		}
-		
-		i,
-		span {
-			.transition(color .45s);
-		}
+		a { color: #b3b3b3; }
+		a:hover { color: #5faee3; }
 	}
 
-	.author,
-	.tags,
-	.comments,
-	time {
+	.post-info > .author,
+	.post-info > .tags,
+	.post-info > .comments,
+	.post-info > .date {
 		margin-right: 10px;
+		float: left;
 		display: inline-block;
-		line-height: 20px;
-		color: @minorFont;
+		line-height: 1;
 	}
 
-	.tags {
+	.post-info > .tags {
 		a {
-			margin-left: 4px;
-			color: @minorFont;
+			margin-right: 4px;
+			max-width: 80px;
+			display: inline-block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			word-break: keep-all;
+			white-space: nowrap;
 		}
 
 		a:after {
-			content: ", ";
-			color: @minorFont;
+			content: " ";
+			color: #BCC6CA;
 		}
 
 		a:last-child:after {
@@ -89,21 +65,21 @@
 		}
 	}
 	
-	.comments span {
+	.post-info > .comments span {
 		margin-left: 4px;
 	}
 
-	&:hover {
-		border-left-color: @edgeActive;
-
-		.post-info span,
-		.post-info i,
-		.post-info .tags a {
-			color: @textFont;
-		}
+	.content {
+		margin-top: 20px;
+		color: #817c7c;
+		font-size: 16px;
 	}
 
-	.content {
-		margin-top: 10px;
+	.content p {
+		line-height: 20px;
+	}
+
+	.content img {
+		max-width: 100%;
 	}
 }

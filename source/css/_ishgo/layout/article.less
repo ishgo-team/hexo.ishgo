@@ -1,16 +1,13 @@
 
 
-// Article - 文章页
-// ===============
-
 .article-content {
 	margin-top: 20px;
-	background-color: @blockBg;
+	background-color: #fafafa;
 	margin-bottom: 40px;
 }
 
 .article-content header {
-	.clearfix();
+	// .clearfix();
 	border-left: none;
 	
 	& > a.title {
@@ -18,7 +15,7 @@
 		padding-bottom: 20px;
 		padding-right: 20px;
 		padding-left: 36px;
-		border-left: 5px solid @edgeActive;
+		border-left: 5px solid #ea6753;
 		width: 100%;
 		display: block;
 		float: none;
@@ -28,11 +25,11 @@
 		h1 {
 			margin: 0;
 			display: block;
-			color: @caption;
-			transition: color .35s;
+			color: #2ca6cb;
+			.transition(color .35s);
 			
 			&:hover {
-				color: @captionAction;
+				color: #2ca6cb;
 			}
 		}
 	}
@@ -77,13 +74,13 @@
 		margin-left: -34px;
 		padding: 0;
 		padding-left: 30px;
-		border-left: 5px solid @edgeActive;
+		border-left: 5px solid #ea6753;
 		cursor: pointer;
-		color: @caption;
+		color: #2ca6cb;
 		.transition(color 0.35s);
 
 		&:hover {
-			color: @captionAction;
+			color: #2ca6cb;
 		}
 	}
 
@@ -143,22 +140,12 @@
 		margin-bottom: 10px;
 		padding: 10px;
 		background-color: #272822;
-		color: @white;
+		color: #fff;
 
 		pre { margin-bottom: 0; }
 		
 
 		// Color Scheme
-		@white: 	#fff;
-		@black: 	#75715E;
-		@blue: 		#66d9ef;
-		@red: 		#D25252;
-		@yellow: 	#E6DB74;
-		@green: 	#A6E22E;
-		@orange: 	#FD971F;
-		@pink: 		#F92672;
-		@purple: 	#AE81FF;
-
 		.container {
 			padding: 0;
 			margin: 0;
@@ -175,53 +162,53 @@
 			}
 		}
 		
-		.label 					{ color: @pink; }
-		.variable 				{ color: @orange; }
-		.number 				{ color: @purple; }
-		.string 				{ color: @yellow; }
-		.regexp 				{ color: @yellow; }
-		.built_in 				{ color: @purple; }
-		.transposed_variable 	{ color: @orange; }
-		.comment 				{ color: @black; }
-		.literal 				{ color: @red; }
-		.preprocessor 			{ color: @pink; }
-		.keyword 				{ color: @pink; }
-		.property 				{ color: @green; }
-		.attribute 				{ color: @green; }
-		.pi 					{ color: @white; }
-		.xml 					{ color: @white; }
-		.vbscript 				{ color: @white; }
-		.title 					{ color: @white; }
-		.type 					{ color: @green;}
+		.label 					{ color: #F92672; }
+		.variable 				{ color: #f39c12; }
+		.number 				{ color: #AE81FF; }
+		.string 				{ color: #E6DB74; }
+		.regexp 				{ color: #E6DB74; }
+		.built_in 				{ color: #AE81FF; }
+		.transposed_variable 	{ color: #f39c12; }
+		.comment 				{ color: #75715E; }
+		.literal 				{ color: #D25252; }
+		.preprocessor 			{ color: #F92672; }
+		.keyword 				{ color: #F92672; }
+		.property 				{ color: #A6E22E; }
+		.attribute 				{ color: #A6E22E; }
+		.pi 					{ color: #fff; }
+		.xml 					{ color: #fff; }
+		.vbscript 				{ color: #fff; }
+		.title 					{ color: #fff; }
+		.type 					{ color: #A6E22E;}
 
 		.class {
-			color: @white;
-			.keyword 			{ color: @blue }
-			.title 				{ color: @white; }
+			color: #fff;
+			.keyword 			{ color: #66d9ef }
+			.title 				{ color: #fff; }
 		}
 
 		.function {
-			.keyword 			{ color: @blue; }
-			.title 				{ color: @green; }
+			.keyword 			{ color: #66d9ef; }
+			.title 				{ color: #A6E22E; }
 			.params {
-				color: @white;
-				.variable 		{ color: @orange; }
+				color: #fff;
+				.variable 		{ color: #f39c12; }
 			}
 		}
 
 		.tag {
-			color: @white;
-			.title 				{ color: @pink; }
+			color: #fff;
+			.title 				{ color: #F92672; }
 		}
 
 		.value {
-			color: @white;
-			.attribute 			{ color: @green; }
+			color: #fff;
+			.attribute 			{ color: #A6E22E; }
 		}
 		
 		.typedef {
 			.container {
-				color: @white;
+				color: #fff;
 			}
 		}
 	}
@@ -262,7 +249,7 @@
 
 	ul.tags li a {
 		margin: 0 5px;
-		color: @linkHoverFont;
+		color: #ea6753;
 	}
 }
 
@@ -291,7 +278,7 @@
 
 	ul.categorie li a {
 		margin: 0 5px;
-		color: @linkHoverFont;
+		color: #ea6753;
 	}
 }
 
@@ -310,16 +297,16 @@
 
 	a {
 		padding: 0.4em 0;
-		background: @bodyBg;
+		background: #ddd;
 		width: 50%;
 		display: block;
 		float: left;
 		text-align: center;
-		.transition(.45s);
+		.transition(all .45s);
 
 		&:hover {
-			color: @white;
-			background: @wet-asphalt;
+			color: #fff;
+			background: #34495e;
 		}
 	}
 
@@ -355,7 +342,7 @@
 		word-wrap: break-word;
 		word-break: normal;
 		float: none;
-		border-left: 5px solid @edgeActive;
+		border-left: 5px solid #ea6753;
 		color: #2ca6cb;
 	}
 

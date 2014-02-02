@@ -1,24 +1,21 @@
 
 
-// Archive
-// =======
-
 .archive-content {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
 .archive-content .article {
-	background-color: @blockBg;
-	border-bottom: 1px solid @edge;
+	background-color: #fafafa;
+	border-bottom: 1px solid #ccc;
 }
 
 .archive-content .article > article {
 	padding: 10px;
 	display: block;
-	border-left: 8px solid @edge;
+	border-left: 8px solid #ccc;
 	line-height: 20px;
-	color: @textFont;
+	color: #817c7c;
 	.transition(border-left .45s);
 
 	a.title {
@@ -28,19 +25,19 @@
 	a.title > h4 {
 		padding-left: 18px;
 		margin: 0;
-		color: @caption;
+		color: #2ca6cb;
 		.transition(color .35s);
 	}
 
 	&:hover a.title > h4 {
-		color: @captionAction;
+		color: #2ca6cb;
 	}
 
 	time {
 		margin-right: 20px;
 		font-size: 18px;
 		float: right;
-		color: @minorFont;
+		color: #BCC6CA;
 		.transition(color .45s);
 	}
 
@@ -51,10 +48,10 @@
 	}
 
 	&:hover {
-		border-left-color: @edgeActive;
+		border-left-color: #ea6753;
 
 		time {
-			color: @textFont;
+			color: #817c7c;
 		}
 	}
 }

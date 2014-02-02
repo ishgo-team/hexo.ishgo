@@ -2,7 +2,7 @@
 
 include ../_error/ie6
 
-header.navbar.navbar-inverse.navbar-fixed-top(role="banner")
+header#header.navbar.navbar-inverse.navbar-static-top(role="banner")
 	div.container
 		div.navbar-header
 			button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#header")
@@ -11,17 +11,10 @@ header.navbar.navbar-inverse.navbar-fixed-top(role="banner")
 				.icon-bar
 				.icon-bar
 
-			a(class="navbar-brand", href!=config.root) iShgo
-				sup 博客
+			a(class="navbar-brand", href!=config.root) ishgo
 				
-		nav#header.collapse.navbar-collapse(role="navigation")
-			ul.nav.navbar-nav
+		nav.collapse.navbar-collapse(role="navigation")
+			ul.nav.navbar-nav.navbar-right
 				each path, menu in theme.menu
 					li
 						a(href!=path)= __('menu.' + menu)
-script.
-	$(function() {
-		$(document).on('click', '[data-toggle="collapse"]', function() {
-			$($(this).attr('data-target')).toggleClass('in');
-		});
-	});

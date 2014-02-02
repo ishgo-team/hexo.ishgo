@@ -1,0 +1,45 @@
+
+
+mixin article(article)
+	if article.hidden !== true
+		article.article
+			a.title(href!=config.root + article.path, title=article.title)
+				h3= article.title
+			
+			.post-info.clearfix
+				- var author = theme.author[article.author];
+				if author
+					.author
+						i.fa.fa-user
+						a.name(href!= author.profile, title=author.name, rel="author")
+							&nbsp;By&nbsp;
+							span= author.name
+				else
+					- var name = article.author || __('article.anonymous');
+					.author
+						i.fa.fa-user 
+						a.name(href!= article.profile, title= name, rel="author")
+							&nbsp;By&nbsp;
+							span= name
+
+				- var tags = article.tags
+				if tags.length
+					div.tags
+						i.fa.fa-tags
+						&nbsp;
+						- tags.sort('post').each(function(item, i) {
+							- if (i > 3) return false;
+							a(href!= config.root + item.path, title= item.name)= item.name
+						- });
+
+				time.date(datetime=article.date.toDate().toISOString())
+					i.fa.fa-clock-o
+					&nbsp;
+					span= article.date.format(config.date_format)
+
+				div.comments
+					i.fa.fa-comments
+					&nbsp;
+					include ../_duoshuo/cmmt_count
+
+			.clearfix.content!= article.excerpt || article.content

@@ -3,7 +3,8 @@
 if page.categories.length
 	.categories_wrap.clearfix
 		.caption
-			i.icon-archive 
+			i.fa.fa-archive
+			&nbsp;
 			= __('article.categories') + ': '
 		ul.categorie
 			- page.categories.sort('posts').each(function(item) {

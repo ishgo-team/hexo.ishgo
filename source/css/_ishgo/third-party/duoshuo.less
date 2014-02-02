@@ -29,7 +29,7 @@ body #ds-thread #ds-reset {
 	.ds-post-options,
 	.ds-post-button {
 		border: 0;
-		background: @white;
+		background: #fff;
 	}
 
 	.ds-toolbar {
@@ -60,7 +60,7 @@ body #ds-thread #ds-reset {
 	.ds-icon-report:after,
 	.ds-icon-delete:after {
 		margin-right: 2px;
-		color: @textFont;
+		color: #817c7c;
 		font-size: 12px;
 		font-family: FontAwesome;
 		font-weight: bold;
@@ -79,11 +79,11 @@ body #ds-thread #ds-reset {
 	.ds-highlight,
 	a.ds-comment-context,
 	#ds-bubble a {
-		color: @linkFont !important;
+		color: #2ca6cb !important;
 		.transition(color .35s);
 
 		&:hover {
-			color: @linkHoverFont !important;
+			color: #ea6753 !important;
 		}
 	}
 
@@ -92,27 +92,27 @@ body #ds-thread #ds-reset {
 
 		.ds-like-panel {
 			cursor: pointer;
-			.text-shadow(none);
-			color: @minorFont;
+			// .text-shadow(none);
+			color: #BCC6CA;
 
 			.ds-highlight {
 				padding-right: 2px;
-				color: @minorFont !important;
+				color: #BCC6CA !important;
 				font-family: Arial;
 			}
 
 			&:hover {
-				color: @textFont;
+				color: #817c7c;
 
 				.ds-highlight {
-					color: @textFont !important;
+					color: #817c7c !important;
 				}
 			}
 		}
 	}
 	
 	a.ds-like-thread-button {
-		.reset-filter();
+		// .reset-filter();
 		background: none;
 		text-shadow: none;
 		outline: none;
@@ -131,7 +131,7 @@ body #ds-thread #ds-reset {
 
 		span.ds-icon-heart:after {
 			content: "\f08a";
-			color: @textFont;
+			color: #817c7c;
 			font-size: 15px;
 			font-family: FontAwesome;
 			font-weight: bold;
@@ -146,7 +146,7 @@ body #ds-thread #ds-reset {
 
 		span.ds-thread-like-text,
 		span.ds-thread-cancel-like {
-			color: @textFont;
+			color: #817c7c;
 		}
 
 		&:hover {
@@ -157,10 +157,10 @@ body #ds-thread #ds-reset {
 	
 	.ds-account-control ul li a {
 		background-image: none;
-		background-color: @blockBg;
-		.text-shadow(none);
-		.text-overflow();
-		color: @textFont;
+		background-color: #fafafa;
+		// .text-shadow(none);
+		// .text-overflow();
+		color: #817c7c;
 
 		&:hover {
 			background-color: #ddd;
@@ -188,27 +188,27 @@ body #ds-thread #ds-reset {
 			.border-radius(0);
 			background: none;
 			*zoom: 1;
-			.text-shadow(none);
-			color: @minorFont;
+			// .text-shadow(none);
+			color: #BCC6CA;
 
 			&:hover {
-				color: @textFont;
+				color: #817c7c;
 
 				.ds-highlight {
-					color: @textFont !important;
+					color: #817c7c !important;
 				}
 			}
 		}
 
 		li.ds-tab a .ds-highlight {
 			padding-right: 2px;
-			color: @minorFont !important;
+			color: #BCC6CA !important;
 			font-family: Arial;
 		}
 
 		li.ds-tab a.ds-current {
 			border-bottom: 2px solid #363a3d;
-			color: @textFont;
+			color: #817c7c;
 		}
 	}
 
@@ -222,10 +222,10 @@ body #ds-thread #ds-reset {
 
 	.ds-comment-body {
 		p a[target="_blank"] {
-			color: @linkFont;
+			color: #2ca6cb;
 
 			&:hover {
-				color: @linkHoverFont;
+				color: #ea6753;
 			}
 		}
 	}
@@ -243,22 +243,22 @@ body #ds-thread #ds-reset {
 		margin-right: -2px;
 		background-color: rgba(29,47,58,.6);
 		.border-bottom-right-radius(4px);
-		.text-shadow(none);
-		color: @white;
+		// .text-shadow(none);
+		color: #fff;
 
 		&:hover {
 			background-color: #34495e;
-			color: @white;
+			color: #fff;
 		}
 	}
 
 	.ds-powered-by {
-		color: @minorFont;
+		color: #BCC6CA;
 		font-size: 14px;
 
 		a {
-			.text-shadow(none);
-			color: @textFont;
+			// .text-shadow(none);
+			color: #817c7c;
 			font-size: 14px;
 		}
 
@@ -279,25 +279,25 @@ body #ds-thread #ds-reset {
 body #ds-thread .ds-no-transition#ds-reset .ds-post-button {
 	margin-right: -2px;
 	background: none !important;
-	.reset-filter();
+	// .reset-filter();
 	background-color: #747f85 !important;
 	.border-bottom-right-radius(4px);
-	.text-shadow(none);
-	color: @white;
+	// .text-shadow(none);
+	color: #fff;
 
 	&:hover {
 		background-color: #34495e !important;
-		color: @white;
+		color: #fff;
 	}
 }
 
 body #ds-wrapper #ds-reset #ds-ctx {
 	.ds-ctx-entry .ds-ctx-head a {
-		color: @linkFont !important;
+		color: #2ca6cb !important;
 		.transition(color .35s);
 
 		&:hover {
-			color: @linkHoverFont !important;
+			color: #ea6753 !important;
 		}
 	}
 }
@@ -324,10 +324,10 @@ body #ds-smilies-tooltip {
 
 	ul.ds-smilies-tabs li a {
 		background-image: none;
-		background-color: @blockBg;
-		.text-shadow(none);
-		.text-overflow();
-		color: @textFont;
+		background-color: #fafafa;
+		// .text-shadow(none);
+		// .text-overflow();
+		color: #817c7c;
 
 		&:hover {
 			background-color: #ddd;
@@ -335,7 +335,7 @@ body #ds-smilies-tooltip {
 
 		&.ds-current {
 			background-color: rgba(29,47,58,0.6);
-			color: @white;
+			color: #fff;
 		}
 	}
 }
@@ -344,12 +344,23 @@ body #ds-smilies-tooltip {
 body #ds-top-threads {
 	margin-left: 0;
 	margin-right: 0;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 0px;
+	padding-right: 00px;
 	list-style: none;
 
 	li {
 		line-height: 24px;
+	}
+
+	li > a {
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		word-break: keep-all;
+		white-space: nowrap;
+		line-height: 40px;
+		color: #666;
+		font-size: 18px;
 	}
 }
 
@@ -357,21 +368,35 @@ body #ds-top-threads {
 body #ds-recent-comments {
 	margin-left: 0;
 	margin-right: 0;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 0;
+	padding-right: 0;
+}
 
-	li.ds-comment {
-		border-top: none;
+body #ds-recent-comments li.ds-comment.ds-show-avatars {
+	padding-left: 60px !important;
+	border-top: none;
+	font-size: 14px;
 
-		.ds-avatar .author img {
-			max-width: none;
-		}
+	.ds-avatar img {
+		max-width: none;
+		width: 50px !important;
+		height: 50px !important;
+		.border-radius(2px);
+	}
 
-		.ds-thread-title a {
-			max-width: 70%;
-			display: inline-block;
-			.text-overflow();
-		}
+	.ds-thread-title {
+		font-size: 14px;
+	}
+
+	.ds-thread-title a {
+		max-width: 70%;
+		display: inline-block;
+		overflow: hidden;
+		vertical-align: middle;
+		text-overflow: ellipsis;
+		word-break: keep-all;
+		white-space: nowrap;
+		font-size: 14px;
 	}
 }
 
