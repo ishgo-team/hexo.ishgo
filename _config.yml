@@ -1,0 +1,128 @@
+
+
+# 网站定义, 优先这里的定义, 如果没有会倒 hexo 根目录的 _config.yml 里面提取
+site:
+	title: iShgo 团队博客
+	subtitle: iShgo 团队博客
+	description: iShgo 技术交流博客
+	ico:
+		ico/apple-touch-icon-144-precomposed.png:
+			size: 144x144
+			rel: apple-touch-icon-precomposed
+		ico/apple-touch-icon-114-precomposed.png:
+			size: 114x114
+			rel: apple-touch-icon-precomposed
+		ico/apple-touch-icon-72-precomposed.png:
+			size: 72x72
+			rel: apple-touch-icon-precomposed
+		ico/apple-touch-icon-57-precomposed.png:
+			rel: apple-touch-icon-precomposed
+		ico/favicon.png:
+			rel: shortcut icon
+
+# 导航菜单
+## 导航栏名字在 languages 里面设置
+menu:
+	home: /
+	archives: /archives
+	about: /about
+
+
+# 侧栏
+## 侧栏项目是否开启
+## author 作者信息
+## categories 文章分类
+## dynamic 热门文章
+## lively 最新动态
+## visitors 最近访客
+sidebar:
+	author: true
+	categories: true
+	dynamic: true
+	lively: true
+	visitors: true
+
+
+# 友情链接
+links:
+	github:
+		icon: icon-github
+		url: https://github.com
+		descript: github
+
+	twitter:
+		icon: icon-twitter
+		url: https://twitter.com/twbootstrap
+		descript: Twitter
+
+	google_plus:
+		icon: icon-google-plus
+		url: https://plus.google.com/
+		descript: Google+
+
+# 作者
+## face		 头像
+## name		 名字
+## signature	个人签名
+## profile	  个人主页 (名字的连接)
+## other		其他主页 必须对应下面 ico
+author:
+	David:
+		face: http://s.gravatar.com/avatar/53d03c1304a6ec5a3a92cdcdf5c7e7e3?s=200
+		name: David
+		signature: 不怕神一样的对手只怕猪一样的队友
+		profile: https://github.com/DavidKk
+		weibo: http://weibo.com/307853201
+		twitter: https://twitter.com/Mr_DavidJones
+		facebook: https://www.facebook.com/kk.cc.david
+		google_plus: https://plus.google.com/111899862347999076942?rel=author
+		github: https://github.com/DavidKk
+
+	Barbery:
+		face: http://tp1.sinaimg.cn/1763035100/180/1293205008/1
+		name: Barbery
+		signature: 加油!骚年~ 你的问题主要是读书不多,而想得太多(T_T)...
+		profile: http://www.stutostu.com/?page_id=5
+		weibo: http://weibo.com/stutostu
+		github: https://github.com/Barbery
+		google_plus: https://plus.google.com/111756747266879940955
+
+
+# 图标定义
+## 使用 `Font-Awesome` icons
+## 对应上面的其他主页必须定义才能显示, 否则不能显示
+## 若要添加, 请自行添加特殊的 icons
+ico:
+	weibo: icon-weibo
+	twitter: icon-twitter
+	facebook: icon-facebook
+	google_plus: icon-google-plus
+	github: icon-github
+	bitbucket: icon-bitbucket
+
+
+# CDN
+cdn:
+	jQuery: http://code.jquery.com/jquery.min.js
+
+
+# 代码着色
+prettify:
+	enable: false
+
+
+# 多说评论
+duoshuo:
+	enable: true
+	id: blogishgo
+
+
+# jiathis分享
+jiathis:
+	enable: true
+	shareUID: 1832206
+	uid: 1374060136495255
+
+# 百度
+baidu:
+	siteID: 47e4c82bef82fd59f14adad5b8d9e28e

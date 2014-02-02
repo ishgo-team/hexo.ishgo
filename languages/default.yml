@@ -1,0 +1,25 @@
+search: 搜索
+page: 第 %d 页
+prev: 上一页
+next: 下一页
+tags: 标签
+tagcloud: 标签云
+comment: 评论交流
+archive_a: 归档
+archive_b: 归档：%s
+
+menu:
+    home: 首页
+    archives: 归档
+    about: 关于我们
+
+sidebar:
+    categories: 文章分类
+    dynamic: 最新动态
+    lively: 热门文章
+    visitors: 最近访客
+
+article:
+    anonymous: 匿名
+    categories: 类别
+    tags: Tags

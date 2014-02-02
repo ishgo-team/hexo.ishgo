@@ -1,0 +1,8 @@
+
+
+if page.prev || page.next
+	.pagination
+		if page.prev
+			a.prev(href!= config.root + page.prev_link, title= __('prev'))= __('prev')
+		if page.next
+			a.next(href!= config.root + page.next_link, title= __('next'))= __('next')

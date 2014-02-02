@@ -1,0 +1,60 @@
+
+
+// Archive
+// =======
+
+.archive-content {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.archive-content .article {
+	background-color: @blockBg;
+	border-bottom: 1px solid @edge;
+}
+
+.archive-content .article > article {
+	padding: 10px;
+	display: block;
+	border-left: 8px solid @edge;
+	line-height: 20px;
+	color: @textFont;
+	.transition(border-left .45s);
+
+	a.title {
+		display: inline-block;
+	}
+
+	a.title > h4 {
+		padding-left: 18px;
+		margin: 0;
+		color: @caption;
+		.transition(color .35s);
+	}
+
+	&:hover a.title > h4 {
+		color: @captionAction;
+	}
+
+	time {
+		margin-right: 20px;
+		font-size: 18px;
+		float: right;
+		color: @minorFont;
+		.transition(color .45s);
+	}
+
+	a.author {
+		margin-left: 18px;
+		font-size: 12px;
+		.transition(color .45s);
+	}
+
+	&:hover {
+		border-left-color: @edgeActive;
+
+		time {
+			color: @textFont;
+		}
+	}
+}

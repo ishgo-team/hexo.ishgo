@@ -1,0 +1,16 @@
+
+
+if theme.prettify.enable === true
+	script(src= config.root + "js/prettify.js", type="text/javascript")
+	script(type="text/javascript").
+		$(function() {
+			$('.prettyprint').each(function() {
+				var $this = $(this), tmpl = $(this).html();
+				tmpl = tmpl.replace(/\<!--\?php/g, '<?php')
+					.replace(/\</g, '&lt;')
+					.replace(/\>/g, '&gt;');
+				$this.html(tmpl);
+			});
+			
+			prettyPrint();
+		});

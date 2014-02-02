@@ -1,0 +1,115 @@
+
+
+// Sidebar
+// ================
+
+.sidebar-content {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: @blockBg;
+}
+
+.sidebar-content aside {
+	padding: 20px 10px 20px 10px;
+	display: block;
+
+	h4.caption {
+		margin-bottom: 0;
+		padding-left: 14px;
+		padding-bottom: 10px;
+		color: @caption;
+		border-bottom: 2px solid @edge;
+	}
+}
+
+.sidebar-content aside .module {
+	margin-bottom: 30px;
+}
+
+.sidebar-content .author_wrap .content {
+	padding-top: 20px;
+
+	a.face {
+		display: block;
+
+		img {
+			margin: 0 auto;
+			max-width: 100%;
+			min-width: 100px;
+			min-height: 100px;
+			display: block;
+		}
+	}
+
+	.links {
+		margin-left: 10px;
+		margin-right: 20px;
+		padding-top: 20px;
+
+		a.link {
+			margin-left: 10px;
+		}
+
+		a.link i {
+			color: @wet-asphalt;
+			font-size: 24px;
+			.transition(color .35s);
+		}
+
+		a.link:hover i {
+			color: #2ea5cd;
+		}
+	}
+
+	.signature {
+		margin-top: 10px;
+		margin-left: 20px;
+		margin-right: 20px;
+		line-height: 20px;
+		color: @minorFont;
+		font-size: 12px;
+	}
+
+}
+
+.sidebar-content .category_wrap .content {
+	padding-bottom: 30px;
+	
+	ul.list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	ul.list li a {
+		padding-left: 10px;
+		border-bottom: 1px solid #ccc;
+		display: block;
+		line-height: 40px;
+		font-size: 14px;
+	}
+}
+
+.sidebar-content .lively_wrap .content {
+	padding-top: 20px;
+
+	ul.ds-top-threads li {
+		.text-overflow();
+	}
+}
+
+.sidebar-content .dynamic_wrap .content {
+	padding-top: 20px;
+}
+
+.sidebar-content .visitors_wrap .content {
+	padding-top: 20px;
+
+	#ds-recent-visitors {
+		padding-left: 0;
+
+		.ds-avatar {
+			display: inline-block;
+		}
+	}
+}

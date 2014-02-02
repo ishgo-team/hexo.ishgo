@@ -1,0 +1,13 @@
+
+
+if page.tags.length
+	.tags_wrap.clearfix
+		.caption
+			i.icon-tags 
+			= __('article.tags') + ': '
+		ul.tags
+			- page.tags.sort('posts').each(function(item) {
+				li
+					a(href=config.root + item.path, title= item.name)= item.name
+						sup= item.posts.length
+			- });

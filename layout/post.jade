@@ -1,0 +1,31 @@
+doctype
+html(lang="en")
+	include _partial/head
+
+	body
+		include _partial/header
+
+		.blog-conteinr.container.container-sd
+			.row
+				.col-lg-9.col-md-9.col-sm-12.col-xs-12
+					.article-content
+						include _post/article
+						include _post/tags
+						include _post/categories
+						include _post/share
+						include _post/pagination
+						include _post/comments
+						include _post/prettify
+						
+				.lg-3.col-md-3.col-sm-12.col-xs-12
+					.sidebar-content
+						aside
+							include author
+							include category
+							include lively
+							include dynamic
+							include visitors
+						
+		include _partial/footer
+		include _duoshuo/import
+		include _jiathis/import

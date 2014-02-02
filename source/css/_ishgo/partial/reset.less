@@ -1,0 +1,36 @@
+
+body {
+	padding-top: 50px;
+	background-color: @bodyBg;
+	font-family: Microsoft YaHei, "微软雅黑", STHeiti, Helvetica, Arial, sans-serif;
+	font-size: @normalFont;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: Microsoft YaHei, "微软雅黑", STHeiti, Helvetica, Arial, sans-serif;
+}
+
+body > .blog-conteinr {
+	padding-bottom: 120px;
+}
+
+a {
+	color: @linkFont;
+	.transition(color .35s);
+
+	&:hover {
+		text-decoration: none;
+		color: @linkHoverFont;
+	}
+}

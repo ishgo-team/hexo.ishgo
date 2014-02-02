@@ -1,0 +1,17 @@
+
+
+header
+	a.title(href="", title=page.title)
+		h1= page.title
+
+	p By
+		- var author = theme.author[page.author]
+		if author
+			a.author(href!= author.profile, title=author.name, rel="author")= author.name
+		else
+			- var name = page.author || __('article.anonymous');
+			a.author(href!= page.profile, title= name, rel="author")= name
+		on
+			time(datetime=page.date.toDate().toISOString())= page.date.format(config.date_format)
+
+article!= page.content

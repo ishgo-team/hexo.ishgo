@@ -1,0 +1,17 @@
+
+
+.footer
+	include ../_baidu/statistics
+
+	footer.container(rol="contentinfo")
+		.links.clearfix
+			each link, name in theme.links
+				a.link(href=link.url, title=name)
+					i(class=link.icon)
+
+		p.copyright.clearfix
+			Powered by 
+			a(href="http://zespia.tw/hexo/", target="_blank", title="hexo") hexo 
+			and Theme by 
+			a(href="http://blog.ishgo.cn", target="_blank", title="ishgo") iShgo 
+			© 2013 

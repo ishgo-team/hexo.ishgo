@@ -1,0 +1,11 @@
+
+
+if theme.jiathis && theme.jiathis.enable
+	script(type="text/javascript").
+		var jiathis_config = {
+			data_track_clickback: true,
+			sm: "copy,renren,cqq",
+			pic: "#{page.photos}",
+			summary: ""
+		};
+	script(src="http://v3.jiathis.com/code/jia.js?uid=" + theme.jiathis.uid, type="text/javascript", charset="utf-8")

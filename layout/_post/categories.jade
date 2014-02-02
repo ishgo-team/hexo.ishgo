@@ -1,0 +1,13 @@
+
+
+if page.categories.length
+	.categories_wrap.clearfix
+		.caption
+			i.icon-archive 
+			= __('article.categories') + ': '
+		ul.categorie
+			- page.categories.sort('posts').each(function(item) {
+				li
+					a(href=config.root + item.path, title= item.name)= item.name
+						sup= item.posts.length
+			- });

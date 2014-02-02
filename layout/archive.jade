@@ -1,0 +1,19 @@
+doctype
+html(lang="en")
+	include _partial/head
+
+	body
+		include _partial/header
+
+		.blog-conteinr.container.container-sd
+			.row
+				.col-lg-12.col-md-12.col-sm-12.col-xs-12
+					.archive-content
+						include _mixins/summary
+						- page.posts.sort('date', -1).each(function(article) {
+							mixin summary(article)
+						- });
+					include _partial/pagination
+
+		include _partial/footer
+		include _duoshuo/import

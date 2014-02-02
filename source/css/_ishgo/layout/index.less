@@ -1,0 +1,109 @@
+
+
+// Index
+// ================
+
+.main-content {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.main-content .article {
+	background-color: @blockBg;
+	border-bottom: 1px solid @edge;
+}
+
+.main-content .article article {
+	padding: 24px;
+	display: block;
+	color: @textFont;
+	border-left: 8px solid @edge;
+	.transition(border-left .45s);
+
+	a.title > h3 {
+		margin-top: 10px;
+		color: @caption;
+		font-family: Microsoft YaHei,"微软雅黑",STHeiti,Helvetica, Arial, sans-serif;
+		.transition(color .35s);
+	}
+
+	&:hover a.title > h3 {
+		color: @captionAction;
+	}
+
+	p {
+		color: @textFont;
+	}
+
+	.post-info {
+		font-size: 12px;
+		& > .author,
+		& > .tags,
+		& > .comments,
+		& > time {
+			float: left;
+		}
+
+		& > .author {
+			span { color: @textFont; }
+			&:hover span { color: @linkHoverFont; }
+		}
+
+		& > .tags a:hover {
+			color: @linkHoverFont !important;
+		}
+
+		i {
+			font-size: 16px;
+		}
+		
+		i,
+		span {
+			.transition(color .45s);
+		}
+	}
+
+	.author,
+	.tags,
+	.comments,
+	time {
+		margin-right: 10px;
+		display: inline-block;
+		line-height: 20px;
+		color: @minorFont;
+	}
+
+	.tags {
+		a {
+			margin-left: 4px;
+			color: @minorFont;
+		}
+
+		a:after {
+			content: ", ";
+			color: @minorFont;
+		}
+
+		a:last-child:after {
+			content: "";
+		}
+	}
+	
+	.comments span {
+		margin-left: 4px;
+	}
+
+	&:hover {
+		border-left-color: @edgeActive;
+
+		.post-info span,
+		.post-info i,
+		.post-info .tags a {
+			color: @textFont;
+		}
+	}
+
+	.content {
+		margin-top: 10px;
+	}
+}

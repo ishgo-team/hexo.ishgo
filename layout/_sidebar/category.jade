@@ -1,0 +1,14 @@
+
+
+if site.categories.length && theme.sidebar.categories
+	.category_wrap.module
+		h4.caption= __('sidebar.categories')
+
+		.content
+			ul.list
+				- site.categories.sort('posts', 'desc').each(function(item, num) {
+					if item.posts.length
+						li
+							a(href!= config.root + item.path, title= item.name)= item.name
+								sup= item.posts.length
+				- });

@@ -1,0 +1,27 @@
+
+
+include ../_error/ie6
+
+header.navbar.navbar-inverse.navbar-fixed-top(role="banner")
+	div.container
+		div.navbar-header
+			button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#header")
+				span.sr-only Toggle navigation
+				.icon-bar
+				.icon-bar
+				.icon-bar
+
+			a(class="navbar-brand", href!=config.root) iShgo
+				sup 博客
+				
+		nav#header.collapse.navbar-collapse(role="navigation")
+			ul.nav.navbar-nav
+				each path, menu in theme.menu
+					li
+						a(href!=path)= __('menu.' + menu)
+script.
+	$(function() {
+		$(document).on('click', '[data-toggle="collapse"]', function() {
+			$($(this).attr('data-target')).toggleClass('in');
+		});
+	});
