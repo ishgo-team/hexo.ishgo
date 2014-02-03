@@ -103,11 +103,6 @@ cdn:
 	jQuery: http://code.jquery.com/jquery.min.js
 
 
-# 代码着色
-prettify:
-	enable: false
-
-
 # 多说评论
 duoshuo:
 	enable: true
