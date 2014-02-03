@@ -1,0 +1,25 @@
+search: Search
+page: %d Page
+prev: Prev
+next: Next
+tags: Tags
+tagcloud: TagCloud
+comment: Comment
+archive_a: Archives
+archive_b: Archive：%s
+
+menu:
+	home: Home
+	archives: Archives
+	about: About
+
+sidebar:
+	categories: Categories
+	dynamic: Dynamic
+	lively: Lively
+	visitors: Visitors
+
+article:
+	anonymous: Anonymous
+	categories: Categories
+	tags: Tags
