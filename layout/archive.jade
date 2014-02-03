@@ -9,9 +9,9 @@ html(lang="en")
 			.row
 				.col-lg-12.col-md-12.col-sm-12.col-xs-12
 					.archive-content
-						include _mixins/summary
+						include _mixins/archive
 						- page.posts.sort('date', -1).each(function(article) {
-							mixin summary(article)
+							mixin archive(article)
 						- });
 					include _partial/pagination
 

@@ -5,10 +5,8 @@ if page.tags.length
 		.caption
 			i.fa.fa-tags
 			&nbsp;
-			= __('article.tags') + ': '
 		ul.tags
 			- page.tags.sort('posts').each(function(item) {
 				li
 					a(href=config.root + item.path, title= item.name)= item.name
-						sup= item.posts.length
 			- });

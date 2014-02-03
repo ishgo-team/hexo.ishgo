@@ -9,7 +9,7 @@
 	padding: 20px 10px 20px 10px;
 	display: block;
 
-	h4.caption {
+	a.author > h4.caption {
 		margin-bottom: 0;
 		padding-bottom: 10px;
 		font-size: 20px;
@@ -35,52 +35,55 @@
 		word-break: keep-all;
 		white-space: nowrap;
 		line-height: 40px;
-		color: #666;
 		font-size: 18px;
 	}
 }
 
 .sidebar-content .author_wrap .content {
 	padding-top: 20px;
+	padding-bottom: 10px;
 
 	a.face {
 		display: block;
+	}
 
-		img {
-			margin: 0 auto;
-			max-width: 100%;
-			min-width: 100px;
-			min-height: 100px;
-			display: block;
-		}
+	a.face img {
+		margin: 0 auto;
+		.border-radius(8px);
+		max-width: 100%;
+		min-width: 100px;
+		min-height: 100px;
+		display: block;
+		.transition(opacity .35s);
+	}
+
+	a.face:hover img {
+		.opacity(.9);
 	}
 
 	.links {
-		margin-right: 20px;
 		padding-top: 20px;
+	}
 
-		a.link {
-			margin-left: 10px;
-		}
+	.links a.link {
+		margin-right: 20px;
+	}
 
-		a.link i {
-			color: #34495e;
-			font-size: 24px;
-			.transition(color .35s);
-		}
+	.links a.link i.fa {
+		color: #34495e;
+		font-size: 36px;
+		.transition(color .35s);
+	}
 
-		a.link:hover i {
-			color: #2ea5cd;
-		}
+	.links a.link:hover i.fa {
+		color: #2ea5cd;
 	}
 
 	.signature {
-		margin-top: 10px;
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-top: 20px;
 		line-height: 20px;
-		color: #BCC6CA;
-		font-size: 12px;
+		color: #999;
+		font-size: 14px;
 	}
 }
 
@@ -95,6 +98,10 @@
 		a > img {
 			width: 50px !important;
 			height: 50px !important;
+			.border-radius(4px);
+			.transition(opacity .35s);
 		}
+
+		a:hover img { .opacity(.9); }
 	}
 }

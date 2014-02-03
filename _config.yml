@@ -46,17 +46,17 @@ sidebar:
 # 友情链接
 links:
 	github:
-		icon: icon-github
+		icon: fa-github
 		url: https://github.com
 		descript: github
 
 	twitter:
-		icon: icon-twitter
+		icon: fa-twitter
 		url: https://twitter.com/twbootstrap
 		descript: Twitter
 
 	google_plus:
-		icon: icon-google-plus
+		icon: fa-google-plus
 		url: https://plus.google.com/
 		descript: Google+
 
@@ -93,12 +93,12 @@ author:
 ## 对应上面的其他主页必须定义才能显示, 否则不能显示
 ## 若要添加, 请自行添加特殊的 icons
 ico:
-	weibo: icon-weibo
-	twitter: icon-twitter
-	facebook: icon-facebook
-	google_plus: icon-google-plus
-	github: icon-github
-	bitbucket: icon-bitbucket
+	weibo: fa-weibo
+	twitter: fa-twitter
+	facebook: fa-facebook
+	google_plus: fa-google-plus
+	github: fa-github
+	bitbucket: fa-bitbucket
 
 
 # CDN

@@ -4,14 +4,36 @@ header
 	a.title(href="", title=page.title)
 		h1= page.title
 
-	p By
-		- var author = theme.author[page.author]
+	.post-info.clearfix
+		- var author = theme.author[page.author];
 		if author
-			a.author(href!= author.profile, title=author.name, rel="author")= author.name
+			.author
+				i.fa.fa-user
+				a.name(href!= author.profile, title=author.name, rel="author")
+					&nbsp;By&nbsp;
+					span= author.name
 		else
 			- var name = page.author || __('article.anonymous');
-			a.author(href!= page.profile, title= name, rel="author")= name
-		on
-			time(datetime=page.date.toDate().toISOString())= page.date.format(config.date_format)
+			.author
+				i.fa.fa-user 
+				a.name(href!= page.profile, title= name, rel="author")
+					&nbsp;By&nbsp;
+					span= name
+
+		- var tags = page.tags
+		if tags.length
+			div.tags
+				i.fa.fa-tags
+				&nbsp;
+				- tags.sort('post').each(function(item, i) {
+					- if (i > 3) return false;
+					a(href!= config.root + item.path, title= item.name)= item.name
+				- });
+
+		time.date(datetime=page.date.toDate().toISOString())
+			i.fa.fa-clock-o
+			&nbsp;
+			span= page.date.format(config.date_format)
+
 
 article!= page.content

@@ -6,24 +6,39 @@
 }
 
 .pagination a {
-	padding: 0.5em 3%;
+	padding: 20px 20px;
 	background: #fafafa;
+	width: 50%;
 	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	text-align: center;
-	// .text-overflow();
+	white-space: nowrap;
+	word-break: keep-all;
 	color: #817c7c;
-	.transition(.45s);
-}
+	font-size: 16px;
+	.transition(color .35s, background-color .35s);
 
-.pagination a:hover {
-	color: #fff;
-	background: #ea6753;
-}
+	&.prev { float: left; }
+	&.next { float: right; }
 
-.pagination .prev {
-	float: left;
-}
+	&:hover {
+		color: #fff;
+		background: #34495e;
+	}
 
-.pagination .next {
-	float: right;
+	&.prev::before{
+		content: "上一篇:";
+		padding-right: 0.5em;
+	}
+
+	&.prev::before{
+		content: "上一篇:";
+		padding-right: 0.5em;
+	}
+
+	&.next::before{
+		content: "下一篇:";
+		padding-right: 0.5em;
+	}
 }

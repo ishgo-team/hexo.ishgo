@@ -36,3 +36,96 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 	pre .atn, code .atn { color: #404 }
 	pre .atv, code .atv { color: #060 }
 }
+
+
+// 追加
+figure .gutter {
+	display: none;
+}
+
+figure table {
+	width: 100%;
+}
+
+pre {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: #272822;
+	color: #fff;
+	pre { margin-bottom: 0; }
+}
+
+pre .label 					{ color: #F92672; }
+pre .variable 				{ color: #f39c12; }
+pre .number 				{ color: #AE81FF; }
+pre .string 				{ color: #E6DB74; }
+pre .regexp 				{ color: #E6DB74; }
+pre .built_in 				{ color: #AE81FF; }
+pre .transposed_variable 	{ color: #f39c12; }
+pre .comment 				{ color: #75715E; }
+pre .literal 				{ color: #D25252; }
+pre .preprocessor 			{ color: #F92672; }
+pre .keyword 				{ color: #F92672; }
+pre .property 				{ color: #A6E22E; }
+pre .attribute 				{ color: #A6E22E; }
+pre .pi 					{ color: #fff; }
+pre .xml 					{ color: #fff; }
+pre .vbscript 				{ color: #fff; }
+pre .title 					{ color: #fff; }
+pre .type 					{ color: #A6E22E;}
+
+pre .class {
+	color: #fff;
+	.keyword 			{ color: #66d9ef }
+	.title 				{ color: #fff; }
+}
+
+pre .function {
+	.keyword 			{ color: #66d9ef; }
+	.title 				{ color: #A6E22E; }
+	.params {
+		color: #fff;
+		.variable 		{ color: #f39c12; }
+	}
+}
+
+pre .tag {
+	color: #fff;
+	.title 				{ color: #F92672; }
+}
+
+pre .value {
+	color: #fff;
+	.attribute 			{ color: #A6E22E; }
+}
+
+pre .typedef {
+	.container {
+		color: #fff;
+	}
+}
+
+pre	.container {
+	padding: 0;
+	margin: 0;
+	max-width: none;
+	width: auto;
+	clear: none;
+
+	&:after,
+	&:before {
+		padding: 0;
+		margin: 0;
+		display: none;
+		content: "";
+	}
+}
+
+blockquote {
+	margin-left: -34px;
+	padding-left: 30px;
+	font-size: 95%;
+	line-height: 1.85em;
+	border-left: .2em solid #ea6753;
+}
