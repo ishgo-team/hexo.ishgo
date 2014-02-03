@@ -1,24 +1,54 @@
-head
-	title
-	meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
-	meta(name="author", value="ishgo team")
-	meta(name="description", value="rebate plugin")
-	meta(name="keywords", value="browers extension")
-	meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
-	//- lt icons
-	link(href= config.root + "ico/logo-icon.png", sizes="144x144", rel="apple-touch-icon-precomposed")
-	link(href= config.root + "ico/logo-icon.png", rel="shortcut icon")
 
-	//- lt styles
-	link(href= config.root + "css/bootstrap.css", rel="stylesheet")
-	link(href= config.root + "css/font-awesome.css", rel="stylesheet")
-	link(href= config.root + "css/ishgo.css", rel="stylesheet")
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
-	//- lt scripts
-	script(src= config.root + "scripts/libs/modernizr.js", type="text/javascript")
-	script(src= config.root + "scripts/libs/css3-mediaqueries.js", type="text/javascript")
+- var title = [];
+if page.current > 1
+	- title.push(__('page', page.current));
+if page.title
+	- title.push(page.title);
+- title.push(config.title);
+title= title.join(' - ')
 
-	// if lt IE 9
-		script(src= config.root + "scripts/libs/html5.js", type="text/javascript")
-		script(src= config.root + "scripts/libs/respond.js", type="text/javascript")
+if page.author
+	meta(name="author", content= page.author)
+
+if page.description
+	meta(name="description", content= page.description)
+else if config.description
+	meta(name="description", content= config.description)
+else if page.excerpt
+	meta(name="description", content= strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, ''))
+else if page.content
+	meta(name="description", content= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150))
+
+if page.keywords
+	meta(name="keywords", content= page.keywords)
+
+if page.title
+	meta(property="og:title", content= page.title)
+
+meta(property="og:site_name", content= config.title)
+
+if page.cover
+	meta(property="og:image", content= page.cover)
+else
+	meta(property="og:image", content= config.cover)
+
+//- lt icons
+link(href= config.root + "ico/logo-icon.png", sizes="144x144", rel="apple-touch-icon-precomposed")
+link(href= config.root + "ico/logo-icon.png", rel="shortcut icon")
+
+//- lt styles
+link(href= config.root + "css/bootstrap.css", rel="stylesheet")
+link(href= config.root + "css/font-awesome.css", rel="stylesheet")
+link(href= config.root + "css/ishgo.css", rel="stylesheet")
+
+//- lt scripts
+script(src= config.root + "scripts/libs/modernizr.js", type="text/javascript")
+script(src= config.root + "scripts/libs/css3-mediaqueries.js", type="text/javascript")
+
+// if lt IE 9
+	script(src= config.root + "scripts/libs/html5.js", type="text/javascript")
+	script(src= config.root + "scripts/libs/respond.js", type="text/javascript")

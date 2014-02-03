@@ -1,13 +1,14 @@
 doctype
 html(lang="en")
-	include _partial/head
+	head
+		include _partial/head
 
 	body
 		include _partial/header
 
 		.blog-conteinr.container.container-sd
 			.row
-				.col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1.col-sm-12.col-xs-12
+				.col-lg-12.col-md-12.col-sm-12.col-xs-12
 					.article-content
 						include _post/article
 						include _post/tags

@@ -2,9 +2,6 @@
 
 # 网站定义, 优先这里的定义, 如果没有会倒 hexo 根目录的 _config.yml 里面提取
 site:
-	title: iShgo 团队博客
-	subtitle: iShgo 团队博客
-	description: iShgo 技术交流博客
 	ico:
 		ico/apple-touch-icon-144-precomposed.png:
 			size: 144x144
@@ -25,7 +22,7 @@ site:
 menu:
 	home: /
 	archives: /archives
-	about: /about
+	about: http://about.ishgo.cn
 
 
 # 侧栏
