@@ -42,4 +42,7 @@ mixin article(article)
 					&nbsp;
 					include ../_duoshuo/cmmt_count
 
-			.clearfix.content!= article.excerpt || article.content
+			.content.clearfix!= article.excerpt || article.content
+
+			.post-entry-button
+				a.btn.btn-lg.btn-read(href!=config.root + article.path) 阅读全部
