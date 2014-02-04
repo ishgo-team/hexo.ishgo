@@ -1,14 +1,13 @@
 
 
 mixin archive(article)
-	.article
-		article
-			time(datetime!= article.date.toDate().toISOString())= article.date.format(config.date_format)
-			a.title(href!= config.url + config.root + article.path, title=article.title)
-				h4= article.title
-			- var author = theme.author[article.author]
-			if author
-				a.author(href!= author.profile, title=author.name, rel="author", target="_blank")= author.name
-			else
-				- var name = article.author || __('article.anonymous')
-				a.author(href!= article.profile, title= name, rel="author", target="_blank")= name
+	article.article.clearfix
+		time(datetime!= article.date.toDate().toISOString())= article.date.format(config.date_format)
+		a.title(href!= config.url + config.root + article.path, title=article.title)
+			h4= article.title
+		- var author = theme.author[article.author]
+		if author
+			a.author(href!= author.profile, title= author.name, rel="author", target="_blank")= author.name
+		else
+			- var name = article.author || __('article.anonymous')
+			a.author(href!= article.profile, title= name, rel="author", target="_blank")= name
