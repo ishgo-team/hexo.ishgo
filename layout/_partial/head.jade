@@ -45,13 +45,13 @@ link(href= config.root + "css/bootstrap.css", rel="stylesheet")
 link(href= config.root + "css/font-awesome.css", rel="stylesheet")
 link(href= config.root + "css/ishgo.css", rel="stylesheet")
 
-//- lt scripts
-script(src= config.root + "scripts/libs/modernizr.js", type="text/javascript")
-script(src= config.root + "scripts/libs/css3-mediaqueries.js", type="text/javascript")
-
-// if lt IE 7
-	link(href= config.root + "css/ie6normore.css", rel="stylesheet", type="text/css")
+// if lt IE 8
+	link(href= config.root + "css/not-supported.css", rel="stylesheet", type="text/css")
 
 // if lt IE 9
+	script(src= config.root + "scripts/libs/modernizr.js", type="text/javascript")
+	script(src= config.root + "scripts/libs/css3-mediaqueries.js", type="text/javascript")
 	script(src= config.root + "scripts/libs/html5.js", type="text/javascript")
 	script(src= config.root + "scripts/libs/respond.js", type="text/javascript")
+
+include ../_baidu/statistics
