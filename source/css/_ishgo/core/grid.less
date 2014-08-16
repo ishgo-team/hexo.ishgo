@@ -1,0 +1,29 @@
+
+
+.container.container-sm {
+	@media (max-width: @screen-xs-max) {
+		width: 100%;
+	}
+}
+
+.container.container-md {
+	@media (max-width: @screen-sm-max) {
+		width: 100%;
+	}
+}
+
+.container.container-lg {
+	@media (max-width: @screen-md-max) {
+		width: 100%;
+	}
+}
+
+// Override
+.make-grid-columns(@type, @gutter-width: @grid-gutter-width, @index: 1) when (@index =< 12) {
+	.col-@{type}-@{index} { width: percentage(@index/12); }
+	.make-grid-columns(@type, @gutter-width, @index + 1);
+}
+
+@media(max-width: 520px) {
+	.make-grid-columns(xxs, 15px);
+}

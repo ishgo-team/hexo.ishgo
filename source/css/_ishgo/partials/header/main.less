@@ -1,0 +1,38 @@
+
+
+#header-container {
+  border-bottom: 0;
+  background-color: transparent;
+  height: 75px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#header-container .nav {
+  margin-top: 15px;
+
+  & > li {
+    float: left;
+  }
+
+  & > li > a {
+    padding: 0 15px;
+    background-color: transparent;
+  }
+}
+
+#header-container .navbar-brand,
+#header-container .nav > li > a {
+  .transition(color .35s);
+
+  color: #c3c3c3;
+  font-size: 16px;
+  font-weight: bold;
+
+  &:hover { color: @text-color; }
+}
+
+#header-container .navbar-brand {
+  font-size: 36px;
+  font-family: "CrimsonTextBoldItalic";
+}

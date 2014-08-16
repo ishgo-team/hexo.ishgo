@@ -1,20 +1,17 @@
 doctype
 html(lang="en")
-	head
-		include _partial/head
+  head
+    include _partial/head
 
-	body
-		include _partial/header
+  body
+    include _partial/header
 
-		.blog-conteinr.container.container-sd
-			.row
-				.col-lg-12.col-md-12.col-sm-12.col-xs-12
-					.archive-content
-						include _mixins/archive
-						- page.posts.sort('date', -1).each(function(article) {
-							mixin archive(article)
-						- });
-					include _partial/pagination
+    #archive-container.container.container-md
+      include _mixins/archive
+      - page.posts.sort('date', -1).each(function(article) {
+        mixin archive(article)
+      - });
+    include _partial/pagination
 
-		include _partial/footer
-		include _duoshuo/import
+    include _partial/footer
+    include _duoshuo/import

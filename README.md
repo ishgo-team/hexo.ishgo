@@ -92,11 +92,11 @@ hidden: false
 
 ``` yml
 url: http://blog.ishgo.cn 
-	
+  
 plugins:
-	- hexo-renderer-jade
-	- hexo-renderer-less
-	
+  - hexo-renderer-jade
+  - hexo-renderer-less
+  
 theme: ishgo
 ```
 
@@ -104,10 +104,10 @@ theme: ishgo
 
 ``` js
 {
-	"dependencies": {
-		"Hexo-renderer-less": "*",
-		"Hexo-renderer-jade": "*"
-	}
+  "dependencies": {
+    "Hexo-renderer-less": "*",
+    "Hexo-renderer-jade": "*"
+  }
 }
 ```
 
@@ -120,15 +120,15 @@ var less = require('less'),
 path = require('path');
 
 hexo.extend.renderer.register('less', 'css', function(data, options, callback) {
-	var parser = new(less.Parser)({
-		paths: path.dirname(data.path),
-		filename: path.basename(data.path)
-	});
+  var parser = new(less.Parser)({
+    paths: path.dirname(data.path),
+    filename: path.basename(data.path)
+  });
 
-	parser.parse(data.text, function(err, tree) {
-		if (err) return callback(err);
-		callback(null, tree.toCSS({compress: true}));
-	});
+  parser.parse(data.text, function(err, tree) {
+    if (err) return callback(err);
+    callback(null, tree.toCSS({compress: true}));
+  });
 });
 ```
 

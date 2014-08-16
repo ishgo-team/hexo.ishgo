@@ -1,0 +1,124 @@
+
+
+// Prettify Theme
+// =========================
+
+pre.prettyprint { display: block; background-color: #333;}
+pre .nocode { background-color: none; color: #000 }
+pre .str { color: #ffa0a0 } /* string  - pink */
+pre .kwd { color: #f0e68c; font-weight: bold }
+pre .com { color: #87ceeb } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type  - lightgreen */
+pre .lit { color: #cd5c5c } /* literal - darkred */
+pre .pun { color: #fff }  /* punctuation */
+pre .pln { color: #fff }  /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag  - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal     - lightgreen */
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE;} /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 {}
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+@media print {
+  pre.prettyprint { background-color: none }
+  pre .str, code .str { color: #060 }
+  pre .kwd, code .kwd { color: #006; font-weight: bold }
+  pre .com, code .com { color: #600; font-style: italic }
+  pre .typ, code .typ { color: #404; font-weight: bold }
+  pre .lit, code .lit { color: #044 }
+  pre .pun, code .pun { color: #440 }
+  pre .pln, code .pln { color: #000 }
+  pre .tag, code .tag { color: #006; font-weight: bold }
+  pre .atn, code .atn { color: #404 }
+  pre .atv, code .atv { color: #060 }
+}
+
+
+// 追加
+figure .gutter {
+  display: none;
+}
+
+figure table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+pre {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #272822;
+  color: #fff;
+  pre { margin-bottom: 0; }
+}
+
+pre .label           { color: #F92672; }
+pre .variable         { color: #f39c12; }
+pre .number         { color: #AE81FF; }
+pre .string         { color: #E6DB74; }
+pre .regexp         { color: #E6DB74; }
+pre .built_in         { color: #AE81FF; }
+pre .transposed_variable   { color: #f39c12; }
+pre .comment         { color: #75715E; }
+pre .literal         { color: #D25252; }
+pre .preprocessor       { color: #F92672; }
+pre .keyword         { color: #F92672; }
+pre .property         { color: #A6E22E; }
+pre .attribute         { color: #A6E22E; }
+pre .pi           { color: #fff; }
+pre .xml           { color: #fff; }
+pre .vbscript         { color: #fff; }
+pre .title           { color: #fff; }
+pre .type           { color: #A6E22E;}
+
+pre .class {
+  color: #fff;
+  .keyword       { color: #66d9ef }
+  .title         { color: #fff; }
+}
+
+pre .function {
+  .keyword       { color: #66d9ef; }
+  .title         { color: #A6E22E; }
+  .params {
+    color: #fff;
+    .variable     { color: #f39c12; }
+  }
+}
+
+pre .tag {
+  color: #fff;
+  .title         { color: #F92672; }
+}
+
+pre .value {
+  color: #fff;
+  .attribute       { color: #A6E22E; }
+}
+
+pre .typedef {
+  .container {
+    color: #fff;
+  }
+}
+
+pre  .container {
+  padding: 0;
+  margin: 0;
+  max-width: none;
+  width: auto;
+  clear: none;
+
+  &:after,
+  &:before {
+    padding: 0;
+    margin: 0;
+    display: none;
+    content: "";
+  }
+}

@@ -1,0 +1,45 @@
+
+
+.pagination {
+  margin-top: 0;
+  width: 100%;
+}
+
+.pagination a {
+  .transition(color .35s, background-color .35s);
+  
+  padding: 20px 20px;
+  background: #fafafa;
+  width: 50%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  white-space: nowrap;
+  word-break: keep-all;
+  color: #817c7c;
+  font-size: 16px;
+
+  &.prev { float: left; }
+  &.next { float: right; }
+
+  &:hover {
+    color: #fff;
+    background: #34495e;
+  }
+
+  &.prev::before{
+    content: "上一篇:";
+    padding-right: 0.5em;
+  }
+
+  &.prev::before{
+    content: "上一篇:";
+    padding-right: 0.5em;
+  }
+
+  &.next::before{
+    content: "下一篇:";
+    padding-right: 0.5em;
+  }
+}

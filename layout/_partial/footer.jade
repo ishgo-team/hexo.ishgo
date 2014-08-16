@@ -1,15 +1,15 @@
 
 
-footer#footer
-	.container(rol="contentinfo")
-		.links.clearfix
-			each link, name in theme.links
-				a.link(href=link.url, title=name)
-					i(class= 'fa ' + link.icon)
+footer#footer-container
+  .container(rol="contentinfo")
+    .links.clearfix
+      each link, name in theme.links
+        a.link(href=link.url, title=name)
+          i(class= 'fa ' + link.icon)
 
-		p.copyright.clearfix
-			= 'Powered by'
-			a(href="http://zespia.tw/hexo/", target="_blank", title="hexo") hexo&nbsp;
-			= 'and Theme by'
-			a(href="http://blog.ishgo.cn", target="_blank", title="ishgo") iShgo&nbsp;
-			= '© 2013'
+    p.copyright.clearfix
+      | Powered by
+      a(href="http://zespia.tw/hexo/", target="_blank", title="hexo") hexo
+      | &nbsp;and Theme by
+      a(href="http://blog.ishgo.cn", target="_blank", title="ishgo") iShgo
+      | &nbsp;&copy;2013

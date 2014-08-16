@@ -1,0 +1,18 @@
+
+
+if page.author && theme.sidebar.author
+  - var author = theme.author[page.author]
+  if author
+    .author_wrap.module
+      a.author(href= author.profile, title= author.name)
+        h4.caption= '@' + author.name
+
+      .content
+        a.face(title= author.name, href= author.profile || "javascript:void(0);", role="author", target="_blank")
+          img(src= author.face)
+        .signature= author.signature
+        .links
+          each ico, name in theme.ico
+            if author[name]
+              a.link(href= author[name], target="_blank")
+                i(class= 'fa ' + ico)

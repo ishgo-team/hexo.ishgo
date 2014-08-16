@@ -1,31 +1,31 @@
 doctype
 html(lang="en")
-	head
-		include _partial/head
+  head
+    include _partial/head
 
-	body
-		include _partial/header
+  body
+    include _partial/header
 
-		.post_container.container
-			.row
-				.col-lg-8.col-md-8.col-sm-12.col-xs-12
-					.article-content
-						include _post/article
-						include _post/tags
-						include _post/categories
-						include _post/share
-						include _post/pagination
-						include _post/comments
-						
-				.lg-4.col-md-4.col-sm-12.col-xs-12
-					.sidebar-content
-						aside
-							include _sidebar/author
-							include _sidebar/category
-							include _sidebar/lively
-							include _sidebar/dynamic
-							include _sidebar/visitors
-						
-		include _partial/footer
-		include _duoshuo/import
-		include _jiathis/import
+    .container.container-sm
+      .row
+        .col-md-9
+          #post-container
+            include _post/article
+            include _post/tags
+            include _post/categories
+            include _post/share
+            include _post/pagination
+            include _post/comments
+            
+        .col-md-3
+          #sidebar-container
+            aside
+              include _partial/author
+              include _partial/category
+              include _partial/lively
+              include _partial/dynamic
+              include _partial/visitors
+            
+    include _partial/footer
+    include _duoshuo/import
+    include _jiathis/import

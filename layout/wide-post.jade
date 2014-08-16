@@ -1,23 +1,20 @@
 doctype
 html(lang="en")
-	head
-		include _partial/head
+  head
+    include _partial/head
 
-	body
-		include _partial/header
-
-		.blog-conteinr.container.container-sd
-			.row
-				.col-lg-12.col-md-12.col-sm-12.col-xs-12
-					.article-content
-						include _post/article
-						include _post/tags
-						include _post/categories
-						include _post/share
-						include _post/pagination
-						include _post/comments
-						include _post/prettify
-												
-		include _partial/footer
-		include _duoshuo/import
-		include _jiathis/import
+  body
+    include _partial/header
+    
+    #post-container.container.container-md
+      include _post/article
+      include _post/tags
+      include _post/categories
+      include _post/share
+      include _post/pagination
+      include _post/comments
+      include _post/prettify
+                        
+    include _partial/footer
+    include _duoshuo/import
+    include _jiathis/import
